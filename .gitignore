@@ -28,3 +28,4 @@
 /src/main/resources/application.properties
 /src/main/resources/db/migration/
 /.vscode/
+/.mvn/
