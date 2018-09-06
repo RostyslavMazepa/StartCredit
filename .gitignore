@@ -24,3 +24,7 @@
 /nbdist/
 /.nb-gradle/
 
+application.properties
+insert.sql
+/src/main/resources/db/migration
+.vscode
