@@ -16,7 +16,12 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .disable()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/","/home","/register","/login").permitAll()
+                .antMatchers(
+                        "/",
+                        "/home",
+                        "/register",
+                        "/login",
+                        "/day-weather").permitAll()
                 .antMatchers(
                         "/private/**",
                         "/document/**",

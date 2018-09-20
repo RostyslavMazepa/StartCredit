@@ -25,8 +25,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
         return new BCryptPasswordEncoder();
     }
 
-    @Autowired
-    PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    //@Autowired
+    //PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     /**
      * Setting up the endpointsconfigurer authentication manager.

@@ -29,3 +29,5 @@
 /src/main/resources/db/migration/
 /.vscode/
 /.mvn/
+/lib/
+Будет удалено src/main/webapp/
