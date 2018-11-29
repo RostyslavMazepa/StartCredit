@@ -32,8 +32,9 @@ public class PersonController {
 
     @PostMapping("/person")
     public ResponseEntity<Void> createPerson(@RequestBody Person person, UriComponentsBuilder builder) {
-        boolean flag = personService.createPerson(person);
-        if (flag == false) {
+        //boolean flag = personService.createPerson(person);
+        Person personSave = personService.createPerson(person);
+        if (personSave.toString().isEmpty()/*flag == false*/) {
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }
         HttpHeaders headers = new HttpHeaders();

@@ -10,7 +10,7 @@ public interface IPersonService {
 
     Person getPersonById(Long personId);
 
-    boolean createPerson(Person person);
+    Person createPerson(Person person);
 
     void updatePerson(Person person);
 

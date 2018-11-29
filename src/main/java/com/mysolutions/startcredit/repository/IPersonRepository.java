@@ -1,21 +1,22 @@
 package com.mysolutions.startcredit.repository;
 
 import com.mysolutions.startcredit.entity.Person;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.sql.Date;
 import java.util.List;
 
-public interface IPersonRepository {
+public interface IPersonRepository extends JpaRepository<Person, Long> {
 
-    List<Person> getPersonAll();
+    //List<Person> getPersonAll();
 
-    Person getPersonById(Long personId);
+    //Person getPersonById(Long personId);
 
-    void createPerson(Person person);
+    //void createPerson(Person person);
 
-    void updatePerson(Person person);
+    //void updatePerson(Person person);
 
-    void deletePerson(Long personId);
+    //void deletePerson(Long personId);
 
-    boolean personExists(String firstName, String middleName, String lastName, Date birthDate);
+    //boolean personExists(String firstName, String middleName, String lastName, Date birthDate);
 }

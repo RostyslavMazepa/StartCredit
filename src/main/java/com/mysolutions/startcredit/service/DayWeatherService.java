@@ -229,6 +229,8 @@ public class DayWeatherService implements IDayWeatherService {
             }
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println("Сайт sinoptik.ua не доступний !!!");
+            return null;
         } catch (ParseException e) {
             e.printStackTrace();
         }

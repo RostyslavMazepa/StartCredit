@@ -15,16 +15,19 @@ public class PersonService implements IPersonService {
 
     @Override
     public List<Person> getPersonAll() {
-        return personRepository.getPersonAll();
+        //return personRepository.getPersonAll();
+        return personRepository.findAll();
     }
 
     @Override
     public Person getPersonById(Long personId) {
-        return personRepository.getPersonById(personId);
+        //return personRepository.getPersonById(personId);
+        return personRepository.getOne(personId);
     }
 
     @Override
-    public boolean createPerson(Person person) {
+    public Person createPerson(Person person) {
+/*
         if (personRepository.personExists(
                 person.getFirstName(),
                 person.getMiddleName(),
@@ -35,15 +38,17 @@ public class PersonService implements IPersonService {
             personRepository.createPerson(person);
             return true;
         }
+*/
+        return personRepository.save(person);
     }
 
     @Override
     public void updatePerson(Person person) {
-        personRepository.updatePerson(person);
+        personRepository.save(person);
     }
 
     @Override
     public void deletePerson(Long personId) {
-        personRepository.deletePerson(personId);
+        personRepository.deleteById(personId);
     }
 }

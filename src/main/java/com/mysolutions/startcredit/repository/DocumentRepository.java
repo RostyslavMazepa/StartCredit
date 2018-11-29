@@ -1,6 +1,7 @@
 package com.mysolutions.startcredit.repository;
 
 import com.mysolutions.startcredit.entity.Document;
+import com.mysolutions.startcredit.entity.Person;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
